@@ -1,6 +1,5 @@
 def call() {
-        withSonarQubeEnv('sonar') {
-            sh ''' $SCANNER_HOME/bin/sonar-scanner -Dsonar.projectName=Youtube -Dsonar.projectKey=Youtube '''
-        }
+    withSonarQubeEnv('sonar-server') {
+        sh ''' $SCANNER_HOME/bin/sonar-scanner -Dsonar.projectName=npm-sqube-trivy-owasp-docker-k8s-prometheus-grafana -Dsonar.projectKey=npm-sqube-trivy-owasp-docker-k8s-prometheus-grafana '''
     }
 }
